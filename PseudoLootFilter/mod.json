@@ -1,0 +1,4240 @@
+{
+  "name": "Pseudo Loot Filter",
+  "description": "Removes item bases without altering the drop chances for the remaining items",
+  "author": "isandybridge",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/xxxx",
+  "version": "1.0.0",
+  "config": [
+
+    {
+      "id": "misc", 
+      "type": "section",
+      "name": "Misc",
+      "defaultExpanded": false
+    },
+    {
+      "id": "gld",
+      "type": "checkbox",
+      "name": "Gold (Partial)",
+      "description": "Enable to partially replace gold with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "hp1",
+      "type": "checkbox",
+      "name": "Minor Healing Potion",
+      "description": "Enable to replace minor healing potions with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "hp2",
+      "type": "checkbox",
+      "name": "Light Healing Potion",
+      "description": "Enable to replace light healing potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "hp3",
+      "type": "checkbox",
+      "name": "Regular Healing Potion",
+      "description": "Enable to replace regular healing potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "hp4",
+      "type": "checkbox",
+      "name": "Greater Healing Potion",
+      "description": "Enable to replace greater healing potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "hp5",
+      "type": "checkbox",
+      "name": "Super Healing Potion",
+      "description": "Enable to replace super healing potions with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "mp1",
+      "type": "checkbox",
+      "name": "Minor Mana Potion",
+      "description": "Enable to replace minor mana potions with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "mp2",
+      "type": "checkbox",
+      "name": "Light Mana Potion",
+      "description": "Enable to replace light mana potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "mp3",
+      "type": "checkbox",
+      "name": "Regular Mana Potion",
+      "description": "Enable to replace regular mana potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "mp4",
+      "type": "checkbox",
+      "name": "Greater Mana Potion",
+      "description": "Enable to replace greater mana potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "mp5",
+      "type": "checkbox",
+      "name": "Super Mana Potion",
+      "description": "Enable to replace super mana potions with NoDrop",
+      "defaultValue": false
+    },
+	
+	{
+      "id": "rvs",
+      "type": "checkbox",
+      "name": "Regular Rejuvenation Potion",
+      "description": "Enable to replace regular rejuvenation potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "rvl",
+      "type": "checkbox",
+      "name": "Full Rejuvenation Potion",
+      "description": "Enable to replace full rejuvenation potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "vps",
+      "type": "checkbox",
+      "name": "Stamina Potion",
+      "description": "Enable to replace stamina potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "yps",
+      "type": "checkbox",
+      "name": "Antidote Potion",
+      "description": "Enable to replace antidote potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "wms",
+      "type": "checkbox",
+      "name": "Thawing Potion",
+      "description": "Enable to replace thawing potions with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "aqv",
+      "type": "checkbox",
+      "name": "Arrows",
+      "description": "Enable to replace arrows with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "cqv",
+      "type": "checkbox",
+      "name": "Bolts",
+      "description": "Enable to replace bolts with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "tsc",
+      "type": "checkbox",
+      "name": "Scroll of Town Portal",
+      "description": "Enable to replace scrolls of town portal with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "isc",
+      "type": "checkbox",
+      "name": "Scroll of Identify",
+      "description": "Enable to replace scrolls of identify with NoDrop",
+      "defaultValue": false
+    },
+	{
+      "id": "key",
+      "type": "checkbox",
+      "name": "Chest Key",
+      "description": "Enable to replace chest keys with NoDrop",
+      "defaultValue": false
+    },
+	 
+    {
+      "id": "gems",
+      "type": "section",
+      "name": "Gems",
+      "defaultExpanded": false
+    },
+    {
+      "id": "gem0",
+      "type": "checkbox",
+      "name": "Chipped Gems",
+      "description": "Enable to replace chipped gems with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "gem1",
+      "type": "checkbox",
+      "name": "Flawed Gems",
+      "description": "Enable to replace flawed gems with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "gem2",
+      "type": "checkbox",
+      "name": "Normal Gems",
+      "description": "Enable to replace normal gems with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "gem3",
+      "type": "checkbox",
+      "name": "Flawless Gems",
+      "description": "Enable to replace flawless gems with NoDrop",
+      "defaultValue": false
+    },
+
+    {
+      "id": "runes",
+      "type": "section",
+      "name": "Low Runes",
+      "defaultExpanded": false
+    },
+    {
+      "id": "r01",
+      "type": "checkbox",
+      "name": "El Rune",
+      "description": "Enable to replace El rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r02",
+      "type": "checkbox",
+      "name": "Eld Rune",
+      "description": "Enable to replace Eld rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r03",
+      "type": "checkbox",
+      "name": "Tir Rune",
+      "description": "Enable to replace Tir rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r04",
+      "type": "checkbox",
+      "name": "Nef Rune",
+      "description": "Enable to replace Nef rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r05",
+      "type": "checkbox",
+      "name": "Eth Rune",
+      "description": "Enable to replace Eth rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r06",
+      "type": "checkbox",
+      "name": "Ith Rune",
+      "description": "Enable to replace Ith rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r07",
+      "type": "checkbox",
+      "name": "Tal Rune",
+      "description": "Enable to replace Tal rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r08",
+      "type": "checkbox",
+      "name": "Ral Rune",
+      "description": "Enable to replace Ral rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r09",
+      "type": "checkbox",
+      "name": "Ort Rune",
+      "description": "Enable to replace Ort rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r10",
+      "type": "checkbox",
+      "name": "Thul Rune",
+      "description": "Enable to replace Thul rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r11",
+      "type": "checkbox",
+      "name": "Amn Rune",
+      "description": "Enable to replace Amn rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r12",
+      "type": "checkbox",
+      "name": "Sol Rune",
+      "description": "Enable to replace Sol rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r13",
+      "type": "checkbox",
+      "name": "Shael Rune",
+      "description": "Enable to replace Shael rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r14",
+      "type": "checkbox",
+      "name": "Dol Rune",
+      "description": "Enable to replace Dol rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r15",
+      "type": "checkbox",
+      "name": "Hel Rune",
+      "description": "Enable to replace Hel rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r16",
+      "type": "checkbox",
+      "name": "Io Rune",
+      "description": "Enable to replace Io rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r17",
+      "type": "checkbox",
+      "name": "Lum Rune",
+      "description": "Enable to replace Lum rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r18",
+      "type": "checkbox",
+      "name": "Ko Rune",
+      "description": "Enable to replace Ko rune with NoDrop",
+      "defaultValue": false
+    },
+    {
+      "id": "r19",
+      "type": "checkbox",
+      "name": "Fal Rune",
+      "description": "Enable to replace Fal rune with NoDrop",
+      "defaultValue": false
+    },
+
+    {
+        "id": "TC3 Armors",
+        "type": "section",
+        "name": "Treasure Class 3 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "cap",
+        "type": "checkbox",
+        "name": "Remove Cap (Unique: Biggin's Bonnet) (Set: Infernal Cranium, Sander's Paragon)",
+        "description": "Enable to replace caps with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "qui",
+        "type": "checkbox",
+        "name": "Remove Quilted Armor (Unique: Greyform) (Set: Arctic Furs)",
+        "description": "Enable to replace quilted armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lea",
+        "type": "checkbox",
+        "name": "Remove Leather Armor (Unique: Blinkbat's Form) (Set: Vidala's Ambush)",
+        "description": "Enable to replace leather armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "buc",
+        "type": "checkbox",
+        "name": "Remove Buckler (Unique: Pelta Lunata) (Set: Hsarus' Iron Fist)",
+        "description": "Enable to replace bucklers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lgl",
+        "type": "checkbox",
+        "name": "Remove Leather Gloves (Unique: The Hand of Broc) (Set: Death's Hand)",
+        "description": "Enable to replace leather glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lbt",
+        "type": "checkbox",
+        "name": "Remove Boots (Unique: Hotspur) (Set: Tancred's Hobnails)",
+        "description": "Enable to replace bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lbl",
+        "type": "checkbox",
+        "name": "Remove Sash (Unique: Lenymo) (Set: Death's Guard)",
+        "description": "Enable to replace sashs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC3 Weapons",
+        "type": "section",
+        "name": "Treasure Class 3 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "hax",
+        "type": "checkbox",
+        "name": "Remove Hand Axe (Unique: The Gnasher)",
+        "description": "Enable to replace hand axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "wnd",
+        "type": "checkbox",
+        "name": "Remove Wand (Unique: Torch of Iro)",
+        "description": "Enable to replace wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "clb",
+        "type": "checkbox",
+        "name": "Remove Club (Unique: Felloak)",
+        "description": "Enable to replace clubs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "scp",
+        "type": "checkbox",
+        "name": "Remove Scepter (Unique: Knell Striker)",
+        "description": "Enable to replace scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ssd",
+        "type": "checkbox",
+        "name": "Remove Short Sword (Unique: Rixot's Keen)",
+        "description": "Enable to replace short swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dgr",
+        "type": "checkbox",
+        "name": "Remove Dagger (Unique: Gull)",
+        "description": "Enable to replace daggers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tkf",
+        "type": "checkbox",
+        "name": "Remove Throwing Knife",
+        "description": "Enable to replace throwing knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "jav",
+        "type": "checkbox",
+        "name": "Remove Javelin",
+        "description": "Enable to replace javelins with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "sst",
+        "type": "checkbox",
+        "name": "Remove Short Staff (Unique: Bane Ash)",
+        "description": "Enable to replace short staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "sbw",
+        "type": "checkbox",
+        "name": "Remove Short Bow (Unique: Pluckeye)",
+        "description": "Enable to replace short bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ktr",
+        "type": "checkbox",
+        "name": "Remove Katar",
+        "description": "Enable to replace katars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob1",
+        "type": "checkbox",
+        "name": "Remove Eagle Orb",
+        "description": "Enable to replace eagle orbs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC6 Armors",
+        "type": "section",
+        "name": "Treasure Class 6 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "skp",
+        "type": "checkbox",
+        "name": "Remove Skull Cap (Unique: Tarnhelm) (Set: Arcanna's Head)",
+        "description": "Enable to replace skull caps with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hla",
+        "type": "checkbox",
+        "name": "Remove Hard Leather Armor (Unique: The Centurion)",
+        "description": "Enable to replace hard leather armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "sml",
+        "type": "checkbox",
+        "name": "Remove Small Shield (Unique: Umbral Disk) (Set: Cleglaw's Claw)",
+        "description": "Enable to replace small shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr1",
+        "type": "checkbox",
+        "name": "Remove Wolf Head",
+        "description": "Enable to replace wolf heads with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba1",
+        "type": "checkbox",
+        "name": "Remove Jawbone Cap",
+        "description": "Enable to replace jawbone caps with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa1",
+        "type": "checkbox",
+        "name": "Remove Targe",
+        "description": "Enable to replace targes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne1",
+        "type": "checkbox",
+        "name": "Remove Preserved Head",
+        "description": "Enable to replace preserved heads with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC6 Weapons",
+        "type": "section",
+        "name": "Treasure Class 6 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "lax",
+        "type": "checkbox",
+        "name": "Remove Large Axe (Unique: Axe of Fechmar)",
+        "description": "Enable to replace large axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "spc",
+        "type": "checkbox",
+        "name": "Remove Spiked Club (Unique: Stoutnail)",
+        "description": "Enable to replace spiked clubs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "scm",
+        "type": "checkbox",
+        "name": "Remove Scimitar (Unique: Blood Crescent)",
+        "description": "Enable to replace scimitars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "spr",
+        "type": "checkbox",
+        "name": "Remove Spear (Unique: The Dragon Chang)",
+        "description": "Enable to replace spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bar",
+        "type": "checkbox",
+        "name": "Remove Bardiche (Unique: Dimoak's Hew)",
+        "description": "Enable to replace bardiches with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hbw",
+        "type": "checkbox",
+        "name": "Remove Hunter's Bow (Unique: Witherstring)",
+        "description": "Enable to replace hunter's bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lxb",
+        "type": "checkbox",
+        "name": "Remove Light Crossbow (Unique: Leadcrow)",
+        "description": "Enable to replace light crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "opl",
+        "type": "checkbox",
+        "name": "Remove Fulminating Potion",
+        "description": "Enable to replace fulminating potions with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC9 Armors",
+        "type": "section",
+        "name": "Treasure Class 9 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "stu",
+        "type": "checkbox",
+        "name": "Remove Studded Leather  (Unique: Twitchthroe) (Set: Cow King's Hide)",
+        "description": "Enable to replace studded leather s with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "vgl",
+        "type": "checkbox",
+        "name": "Remove Heavy Gloves (Unique: Bloodfist) (Set: Sander's Taboo)",
+        "description": "Enable to replace heavy glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "vbt",
+        "type": "checkbox",
+        "name": "Remove Heavy Boots (Unique: Gorefoot) (Set: Cow King's Hooves, Sander's Riprap)",
+        "description": "Enable to replace heavy bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "vbl",
+        "type": "checkbox",
+        "name": "Remove Light Belt (Unique: Snakecord) (Set: Arctic Binding)",
+        "description": "Enable to replace light belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr2",
+        "type": "checkbox",
+        "name": "Remove Hawk Helm",
+        "description": "Enable to replace hawk helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba2",
+        "type": "checkbox",
+        "name": "Remove Fanged Helm",
+        "description": "Enable to replace fanged helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa2",
+        "type": "checkbox",
+        "name": "Remove Rondache",
+        "description": "Enable to replace rondaches with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne2",
+        "type": "checkbox",
+        "name": "Remove Zombie Head",
+        "description": "Enable to replace zombie heads with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC9 Weapons",
+        "type": "section",
+        "name": "Treasure Class 9 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "axe",
+        "type": "checkbox",
+        "name": "Remove Axe (Unique: Deathspade)",
+        "description": "Enable to replace axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mac",
+        "type": "checkbox",
+        "name": "Remove Mace (Unique: Crushflange)",
+        "description": "Enable to replace maces with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "sbr",
+        "type": "checkbox",
+        "name": "Remove Saber (Unique: Skewer of Krintiz) (Set: Angelic Sickle)",
+        "description": "Enable to replace sabers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dir",
+        "type": "checkbox",
+        "name": "Remove Dirk (Unique: The Diggler)",
+        "description": "Enable to replace dirks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tax",
+        "type": "checkbox",
+        "name": "Remove Throwing Axe",
+        "description": "Enable to replace throwing axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tri",
+        "type": "checkbox",
+        "name": "Remove Trident (Unique: Razortine)",
+        "description": "Enable to replace tridents with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lst",
+        "type": "checkbox",
+        "name": "Remove Long Staff (Unique: Serpent Lord)",
+        "description": "Enable to replace long staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lbw",
+        "type": "checkbox",
+        "name": "Remove Long Bow (Unique: Raven Claw)",
+        "description": "Enable to replace long bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gpl",
+        "type": "checkbox",
+        "name": "Remove Strangling Gas Potion",
+        "description": "Enable to replace strangling gas potions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "wrb",
+        "type": "checkbox",
+        "name": "Remove Wrist Blade",
+        "description": "Enable to replace wrist blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob2",
+        "type": "checkbox",
+        "name": "Remove Sacred Globe",
+        "description": "Enable to replace sacred globes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC12 Armors",
+        "type": "section",
+        "name": "Treasure Class 12 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "hlm",
+        "type": "checkbox",
+        "name": "Remove Helm (Unique: Coif of Glory) (Set: Berserker's Headgear)",
+        "description": "Enable to replace helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "rng",
+        "type": "checkbox",
+        "name": "Remove Ring Mail (Unique: Darkglow) (Set: Angelic Mantle)",
+        "description": "Enable to replace ring mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lrg",
+        "type": "checkbox",
+        "name": "Remove Large Shield (Unique: Stormguild) (Set: Civerb's Ward)",
+        "description": "Enable to replace large shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mgl",
+        "type": "checkbox",
+        "name": "Remove Chain Gloves (Unique: Chance Guards) (Set: Cleglaw's Pincers)",
+        "description": "Enable to replace chain glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mbt",
+        "type": "checkbox",
+        "name": "Remove Chain Boots (Unique: Treads of Cthon) (Set: Hsarus' Iron Heel)",
+        "description": "Enable to replace chain bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mbl",
+        "type": "checkbox",
+        "name": "Remove Belt (Unique: Nightsmoke) (Set: Hsarus' Iron Stay, Hwanin's Blessing)",
+        "description": "Enable to replace belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "spk",
+        "type": "checkbox",
+        "name": "Remove Spiked Shield (Unique: Swordback Hold)",
+        "description": "Enable to replace spiked shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC12 Weapons",
+        "type": "section",
+        "name": "Treasure Class 12 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "bax",
+        "type": "checkbox",
+        "name": "Remove Broad Axe  (Unique: Goreshovel)",
+        "description": "Enable to replace broad axe s with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ywn",
+        "type": "checkbox",
+        "name": "Remove Yew Wand (Unique: Maelstrom)",
+        "description": "Enable to replace yew wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "flc",
+        "type": "checkbox",
+        "name": "Remove Falchion (Unique: Gleamscythe)",
+        "description": "Enable to replace falchions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "crs",
+        "type": "checkbox",
+        "name": "Remove Crystal Sword (Unique: Azurewrath)",
+        "description": "Enable to replace crystal swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "2hs",
+        "type": "checkbox",
+        "name": "Remove Two-Handed Sword (Unique: Shadowfang)",
+        "description": "Enable to replace two-handed swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pil",
+        "type": "checkbox",
+        "name": "Remove Pilum",
+        "description": "Enable to replace pilums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "vou",
+        "type": "checkbox",
+        "name": "Remove Voulge (Unique: Steelgoad)",
+        "description": "Enable to replace voulges with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "cst",
+        "type": "checkbox",
+        "name": "Remove Gnarled Staff (Unique: Spire of Lazarus)",
+        "description": "Enable to replace gnarled staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "cbw",
+        "type": "checkbox",
+        "name": "Remove Composite Bow (Unique: Rogue's Bow)",
+        "description": "Enable to replace composite bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "axf",
+        "type": "checkbox",
+        "name": "Remove Hatchet Hands",
+        "description": "Enable to replace hatchet handss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob3",
+        "type": "checkbox",
+        "name": "Remove Smoked Sphere",
+        "description": "Enable to replace smoked spheres with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC15 Armors",
+        "type": "section",
+        "name": "Treasure Class 15 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "fhl",
+        "type": "checkbox",
+        "name": "Remove Full Helm (Unique: Duskdeep) (Set: Isenhart's Horns)",
+        "description": "Enable to replace full helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "scl",
+        "type": "checkbox",
+        "name": "Remove Scale Mail (Unique: Hawkmail)",
+        "description": "Enable to replace scale mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "chn",
+        "type": "checkbox",
+        "name": "Remove Chain Mail (Unique: Sparking Mail) (Set: Cathan's Mesh)",
+        "description": "Enable to replace chain mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "kit",
+        "type": "checkbox",
+        "name": "Remove Kite Shield (Unique: Steelclash) (Set: Milabrega's Orb)",
+        "description": "Enable to replace kite shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC15 Weapons",
+        "type": "section",
+        "name": "Treasure Class 15 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "2ax",
+        "type": "checkbox",
+        "name": "Remove Double Axe (Unique: Bladebone) (Set: Berserker's Hatchet)",
+        "description": "Enable to replace double axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gsc",
+        "type": "checkbox",
+        "name": "Remove Grand Scepter (Unique: Rusthandle) (Set: Civerb's Cudgel)",
+        "description": "Enable to replace grand scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mst",
+        "type": "checkbox",
+        "name": "Remove Morning Star (Unique: Bloodrise)",
+        "description": "Enable to replace morning stars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bsd",
+        "type": "checkbox",
+        "name": "Remove Broad Sword (Unique: Griswold's Edge) (Set: Isenhart's Lightbrand)",
+        "description": "Enable to replace broad swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bkf",
+        "type": "checkbox",
+        "name": "Remove Balanced Knife",
+        "description": "Enable to replace balanced knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ssp",
+        "type": "checkbox",
+        "name": "Remove Short Spear",
+        "description": "Enable to replace short spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "scy",
+        "type": "checkbox",
+        "name": "Remove Scythe (Unique: Soul Harvest)",
+        "description": "Enable to replace scythes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mxb",
+        "type": "checkbox",
+        "name": "Remove Crossbow (Unique: Ichorsting)",
+        "description": "Enable to replace crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ces",
+        "type": "checkbox",
+        "name": "Remove Cestus",
+        "description": "Enable to replace cestuss with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC18 Armors",
+        "type": "section",
+        "name": "Treasure Class 18 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "brs",
+        "type": "checkbox",
+        "name": "Remove Breast Plate (Unique: Venom Ward) (Set: Isenhart's Case)",
+        "description": "Enable to replace breast plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr3",
+        "type": "checkbox",
+        "name": "Remove Antlers",
+        "description": "Enable to replace antlerss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba3",
+        "type": "checkbox",
+        "name": "Remove Horned Helm",
+        "description": "Enable to replace horned helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa3",
+        "type": "checkbox",
+        "name": "Remove Heraldic Shield",
+        "description": "Enable to replace heraldic shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne3",
+        "type": "checkbox",
+        "name": "Remove Unraveller Head",
+        "description": "Enable to replace unraveller heads with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC18 Weapons",
+        "type": "section",
+        "name": "Treasure Class 18 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "btx",
+        "type": "checkbox",
+        "name": "Remove Battle Axe (Unique: The Chieftain)",
+        "description": "Enable to replace battle axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bwn",
+        "type": "checkbox",
+        "name": "Remove Bone Wand (Unique: Gravenspine) (Set: Sander's Superstition)",
+        "description": "Enable to replace bone wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "clm",
+        "type": "checkbox",
+        "name": "Remove Claymore (Unique: Soulflay)",
+        "description": "Enable to replace claymores with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "kri",
+        "type": "checkbox",
+        "name": "Remove Kriss (Unique: The Jade Tan Do)",
+        "description": "Enable to replace krisss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bal",
+        "type": "checkbox",
+        "name": "Remove Balanced Axe",
+        "description": "Enable to replace balanced axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "brn",
+        "type": "checkbox",
+        "name": "Remove Brandistock (Unique: Bloodthief)",
+        "description": "Enable to replace brandistocks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bst",
+        "type": "checkbox",
+        "name": "Remove Battle Staff (Unique: The Salamander) (Set: Cathan's Rule)",
+        "description": "Enable to replace battle staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "sbb",
+        "type": "checkbox",
+        "name": "Remove Short Battle Bow (Unique: Stormstrike)",
+        "description": "Enable to replace short battle bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "opm",
+        "type": "checkbox",
+        "name": "Remove Exploding Potion",
+        "description": "Enable to replace exploding potions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "clw",
+        "type": "checkbox",
+        "name": "Remove Claws",
+        "description": "Enable to replace clawss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob4",
+        "type": "checkbox",
+        "name": "Remove Clasped Orb",
+        "description": "Enable to replace clasped orbs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am1",
+        "type": "checkbox",
+        "name": "Remove Stag Bow",
+        "description": "Enable to replace stag bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am3",
+        "type": "checkbox",
+        "name": "Remove Maiden Spear",
+        "description": "Enable to replace maiden spears with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC21 Armors",
+        "type": "section",
+        "name": "Treasure Class 21 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "msk",
+        "type": "checkbox",
+        "name": "Remove Mask (Unique: The Face of Horror) (Set: Cathan's Visage)",
+        "description": "Enable to replace masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "spl",
+        "type": "checkbox",
+        "name": "Remove Splint Mail (Unique: Iceblink) (Set: Berserker's Hauberk)",
+        "description": "Enable to replace splint mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tgl",
+        "type": "checkbox",
+        "name": "Remove Light Gauntlets (Unique: Magefist) (Set: Iratha's Cuff, Arctic Mitts)",
+        "description": "Enable to replace light gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tbt",
+        "type": "checkbox",
+        "name": "Remove Light Plated Boots (Unique: Goblin Toe) (Set: Vidala's Fetlock)",
+        "description": "Enable to replace light plated bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tbl",
+        "type": "checkbox",
+        "name": "Remove Heavy Belt (Unique: Goldwrap) (Set: Iratha's Cord, Infernal Sign)",
+        "description": "Enable to replace heavy belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bsh",
+        "type": "checkbox",
+        "name": "Remove Bone Shield (Unique: Wall of the Eyeless)",
+        "description": "Enable to replace bone shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr4",
+        "type": "checkbox",
+        "name": "Remove Falcon Mask",
+        "description": "Enable to replace falcon masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba4",
+        "type": "checkbox",
+        "name": "Remove Assault Helmet",
+        "description": "Enable to replace assault helmets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa4",
+        "type": "checkbox",
+        "name": "Remove Aerin Shield",
+        "description": "Enable to replace aerin shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne4",
+        "type": "checkbox",
+        "name": "Remove Gargoyle Head",
+        "description": "Enable to replace gargoyle heads with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC21 Weapons",
+        "type": "section",
+        "name": "Treasure Class 21 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "mpi",
+        "type": "checkbox",
+        "name": "Remove Military Pick (Unique: Skull Splitter) (Set: Tancred's Crowbill)",
+        "description": "Enable to replace military picks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "wsp",
+        "type": "checkbox",
+        "name": "Remove War Scepter (Unique: Stormeye) (Set: Milabrega's Rod)",
+        "description": "Enable to replace war scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "fla",
+        "type": "checkbox",
+        "name": "Remove Flail (Unique: The General's Tan Do Li Ga)",
+        "description": "Enable to replace flails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "mau",
+        "type": "checkbox",
+        "name": "Remove Maul (Unique: Bonesnap)",
+        "description": "Enable to replace mauls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lsd",
+        "type": "checkbox",
+        "name": "Remove Long Sword  (Unique: Hellplague) (Set: Cleglaw's Tooth)",
+        "description": "Enable to replace long sword s with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gis",
+        "type": "checkbox",
+        "name": "Remove Giant Sword (Unique: Kinemil's Awl)",
+        "description": "Enable to replace giant swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "spt",
+        "type": "checkbox",
+        "name": "Remove Spetum (Unique: Lance of Yaggai)",
+        "description": "Enable to replace spetums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pax",
+        "type": "checkbox",
+        "name": "Remove Poleaxe (Unique: The Battlebranch)",
+        "description": "Enable to replace poleaxes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gpm",
+        "type": "checkbox",
+        "name": "Remove Choking Gas Potion",
+        "description": "Enable to replace choking gas potions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "btl",
+        "type": "checkbox",
+        "name": "Remove Blade Talons",
+        "description": "Enable to replace blade talonss with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC24 Armors",
+        "type": "section",
+        "name": "Treasure Class 24 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ghm",
+        "type": "checkbox",
+        "name": "Remove Great Helm (Unique: Howltusk) (Set: Sigon's Visor)",
+        "description": "Enable to replace great helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "plt",
+        "type": "checkbox",
+        "name": "Remove Plate Mail (Unique: Boneflesh)",
+        "description": "Enable to replace plate mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "tow",
+        "type": "checkbox",
+        "name": "Remove Tower Shield (Unique: Bverrit Keep) (Set: Sigon's Guard)",
+        "description": "Enable to replace tower shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bhm",
+        "type": "checkbox",
+        "name": "Remove Bone Helm (Unique: Wormskull) (Set: Tancred's Skull)",
+        "description": "Enable to replace bone helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr5",
+        "type": "checkbox",
+        "name": "Remove Spirit Mask",
+        "description": "Enable to replace spirit masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba5",
+        "type": "checkbox",
+        "name": "Remove Avenger Guard (Set: Immortal King's Will)",
+        "description": "Enable to replace avenger guards with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa5",
+        "type": "checkbox",
+        "name": "Remove Crown Shield",
+        "description": "Enable to replace crown shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne5",
+        "type": "checkbox",
+        "name": "Remove Demon Head",
+        "description": "Enable to replace demon heads with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ci0",
+        "type": "checkbox",
+        "name": "Remove Circlet (Set: Naj's Circlet)",
+        "description": "Enable to replace circlets with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC24 Weapons",
+        "type": "section",
+        "name": "Treasure Class 24 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "gax",
+        "type": "checkbox",
+        "name": "Remove Great Axe (Unique: Brainhew)",
+        "description": "Enable to replace great axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bsw",
+        "type": "checkbox",
+        "name": "Remove Bastard Sword (Unique: Blacktongue)",
+        "description": "Enable to replace bastard swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bld",
+        "type": "checkbox",
+        "name": "Remove Blade (Unique: Spectral Shard)",
+        "description": "Enable to replace blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "glv",
+        "type": "checkbox",
+        "name": "Remove Glaive",
+        "description": "Enable to replace glaives with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pik",
+        "type": "checkbox",
+        "name": "Remove Pike (Unique: The Tannr Gorerod)",
+        "description": "Enable to replace pikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "wst",
+        "type": "checkbox",
+        "name": "Remove War Staff (Unique: The Iron Jang Bong) (Set: Arcanna's Deathwand)",
+        "description": "Enable to replace war staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lbb",
+        "type": "checkbox",
+        "name": "Remove Long Battle Bow (Unique: Wizendraw) (Set: Vidala's Barb)",
+        "description": "Enable to replace long battle bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hxb",
+        "type": "checkbox",
+        "name": "Remove Heavy Crossbow (Unique: Hellcast)",
+        "description": "Enable to replace heavy crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "skr",
+        "type": "checkbox",
+        "name": "Remove Scissors Katar",
+        "description": "Enable to replace scissors katars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob5",
+        "type": "checkbox",
+        "name": "Remove Jared's Stone",
+        "description": "Enable to replace jared's stones with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am5",
+        "type": "checkbox",
+        "name": "Remove Maiden Javelin",
+        "description": "Enable to replace maiden javelins with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC27 Armors",
+        "type": "section",
+        "name": "Treasure Class 27 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "hgl",
+        "type": "checkbox",
+        "name": "Remove Gauntlets (Unique: Frostburn) (Set: Sigon's Gage)",
+        "description": "Enable to replace gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hbt",
+        "type": "checkbox",
+        "name": "Remove Greaves (Unique: Tearhaunch) (Set: Sigon's Sabot)",
+        "description": "Enable to replace greavess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hbl",
+        "type": "checkbox",
+        "name": "Remove Plated Belt (Unique: Bladebuckle) (Set: Sigon's Wrap)",
+        "description": "Enable to replace plated belts with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC27 Weapons",
+        "type": "section",
+        "name": "Treasure Class 27 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "wax",
+        "type": "checkbox",
+        "name": "Remove War Axe (Unique: Rakescar)",
+        "description": "Enable to replace war axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gix",
+        "type": "checkbox",
+        "name": "Remove Giant Axe (Unique: Humongous)",
+        "description": "Enable to replace giant axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gwn",
+        "type": "checkbox",
+        "name": "Remove Grim Wand (Unique: Ume's Lament) (Set: Infernal Torch)",
+        "description": "Enable to replace grim wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "whm",
+        "type": "checkbox",
+        "name": "Remove War Hammer (Unique: Ironstone)",
+        "description": "Enable to replace war hammers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "wsd",
+        "type": "checkbox",
+        "name": "Remove War Sword (Unique: Culwen's Point) (Set: Death's Touch)",
+        "description": "Enable to replace war swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "flb",
+        "type": "checkbox",
+        "name": "Remove Flamberge (Unique: Ripsaw)",
+        "description": "Enable to replace flamberges with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "swb",
+        "type": "checkbox",
+        "name": "Remove Short War Bow (Unique: Hellclap) (Set: Arctic Horn)",
+        "description": "Enable to replace short war bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am2",
+        "type": "checkbox",
+        "name": "Remove Reflex Bow",
+        "description": "Enable to replace reflex bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am4",
+        "type": "checkbox",
+        "name": "Remove Maiden Pike",
+        "description": "Enable to replace maiden pikes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC30 Armors",
+        "type": "section",
+        "name": "Treasure Class 30 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "crn",
+        "type": "checkbox",
+        "name": "Remove Crown (Unique: Undead Crown) (Set: Iratha's Coil, Milabrega's Diadem)",
+        "description": "Enable to replace crowns with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "fld",
+        "type": "checkbox",
+        "name": "Remove Field Plate (Unique: Rockfleece)",
+        "description": "Enable to replace field plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gts",
+        "type": "checkbox",
+        "name": "Remove Gothic Shield (Unique: The Ward) (Set: Isenhart's Parry)",
+        "description": "Enable to replace gothic shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC30 Weapons",
+        "type": "section",
+        "name": "Treasure Class 30 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "tsp",
+        "type": "checkbox",
+        "name": "Remove Throwing Spear",
+        "description": "Enable to replace throwing spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "hal",
+        "type": "checkbox",
+        "name": "Remove Halberd (Unique: Woestave)",
+        "description": "Enable to replace halberds with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ops",
+        "type": "checkbox",
+        "name": "Remove Oil Potion",
+        "description": "Enable to replace oil potions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9cl",
+        "type": "checkbox",
+        "name": "Remove Cudgel (Unique: Dark Clan Crusher)",
+        "description": "Enable to replace cudgels with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ss",
+        "type": "checkbox",
+        "name": "Remove Gladius (Unique: Bloodletter)",
+        "description": "Enable to replace gladiuss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ja",
+        "type": "checkbox",
+        "name": "Remove War Javelin",
+        "description": "Enable to replace war javelins with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8ss",
+        "type": "checkbox",
+        "name": "Remove Jo Staff (Unique: Razorswitch)",
+        "description": "Enable to replace jo staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8sb",
+        "type": "checkbox",
+        "name": "Remove Edge Bow (Unique: Skystrike)",
+        "description": "Enable to replace edge bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ar",
+        "type": "checkbox",
+        "name": "Remove Quhab",
+        "description": "Enable to replace quhabs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC33 Armors",
+        "type": "section",
+        "name": "Treasure Class 33 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "gth",
+        "type": "checkbox",
+        "name": "Remove Gothic Plate (Unique: Rattlecage) (Set: Sigon's Shelter)",
+        "description": "Enable to replace gothic plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xlg",
+        "type": "checkbox",
+        "name": "Remove Demonhide Gloves (Unique: Venom Grip)",
+        "description": "Enable to replace demonhide glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba6",
+        "type": "checkbox",
+        "name": "Remove Jawbone Visor",
+        "description": "Enable to replace jawbone visors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne6",
+        "type": "checkbox",
+        "name": "Remove Mummified Trophy",
+        "description": "Enable to replace mummified trophys with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC33 Weapons",
+        "type": "section",
+        "name": "Treasure Class 33 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "gma",
+        "type": "checkbox",
+        "name": "Remove Great Maul (Unique: Steeldriver)",
+        "description": "Enable to replace great mauls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gsd",
+        "type": "checkbox",
+        "name": "Remove Great Sword (Unique: The Patriarch)",
+        "description": "Enable to replace great swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "lwb",
+        "type": "checkbox",
+        "name": "Remove Long War Bow (Unique: Blastbark)",
+        "description": "Enable to replace long war bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "rxb",
+        "type": "checkbox",
+        "name": "Remove Repeating Crossbow (Unique: Doomslinger)",
+        "description": "Enable to replace repeating crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "gps",
+        "type": "checkbox",
+        "name": "Remove Rancid Gas Potion",
+        "description": "Enable to replace rancid gas potions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ha",
+        "type": "checkbox",
+        "name": "Remove Hatchet (Unique: Coldkill)",
+        "description": "Enable to replace hatchets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9wn",
+        "type": "checkbox",
+        "name": "Remove Burnt Wand (Unique: Suicide Branch)",
+        "description": "Enable to replace burnt wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9sc",
+        "type": "checkbox",
+        "name": "Remove Rune Scepter (Unique: Zakarum's Hand)",
+        "description": "Enable to replace rune scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9sp",
+        "type": "checkbox",
+        "name": "Remove Barbed Club (Unique: Fleshrender)",
+        "description": "Enable to replace barbed clubs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9dg",
+        "type": "checkbox",
+        "name": "Remove Poignard (Unique: Spineripper)",
+        "description": "Enable to replace poignards with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9tk",
+        "type": "checkbox",
+        "name": "Remove Battle Dart (Unique: Deathbit)",
+        "description": "Enable to replace battle darts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9sr",
+        "type": "checkbox",
+        "name": "Remove War Spear (Unique: The Impaler)",
+        "description": "Enable to replace war spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9b7",
+        "type": "checkbox",
+        "name": "Remove Lochaber Axe (Unique: The Meat Scraper)",
+        "description": "Enable to replace lochaber axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8hb",
+        "type": "checkbox",
+        "name": "Remove Razor Bow (Unique: Riphook)",
+        "description": "Enable to replace razor bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9wb",
+        "type": "checkbox",
+        "name": "Remove Wrist Spike",
+        "description": "Enable to replace wrist spikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob6",
+        "type": "checkbox",
+        "name": "Remove Glowing Orb",
+        "description": "Enable to replace glowing orbs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC36 Armors",
+        "type": "section",
+        "name": "Treasure Class 36 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ltp",
+        "type": "checkbox",
+        "name": "Remove Light Plate (Unique: Heavenly Garb) (Set: Arcanna's Flesh)",
+        "description": "Enable to replace light plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xap",
+        "type": "checkbox",
+        "name": "Remove War Hat (Unique: Peasant Crown) (Set: Cow King's Horns)",
+        "description": "Enable to replace war hats with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xui",
+        "type": "checkbox",
+        "name": "Remove Ghost Armor (Unique: The Spirit Shroud)",
+        "description": "Enable to replace ghost armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xea",
+        "type": "checkbox",
+        "name": "Remove Serpentskin Armor (Unique: Skin of the Vipermagi)",
+        "description": "Enable to replace serpentskin armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xuc",
+        "type": "checkbox",
+        "name": "Remove Defender (Unique: Visceratuant)",
+        "description": "Enable to replace defenders with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xlb",
+        "type": "checkbox",
+        "name": "Remove Demonhide Boots (Unique: Infernostride) (Set: Rite of Passage)",
+        "description": "Enable to replace demonhide bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "zlb",
+        "type": "checkbox",
+        "name": "Remove Demonhide Sash (Unique: String of Ears)",
+        "description": "Enable to replace demonhide sashs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr6",
+        "type": "checkbox",
+        "name": "Remove Alpha Helm",
+        "description": "Enable to replace alpha helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa6",
+        "type": "checkbox",
+        "name": "Remove Akaran Targe",
+        "description": "Enable to replace akaran targes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC36 Weapons",
+        "type": "section",
+        "name": "Treasure Class 36 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "wsc",
+        "type": "checkbox",
+        "name": "Remove War Scythe (Unique: The Grim Reaper)",
+        "description": "Enable to replace war scythes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ax",
+        "type": "checkbox",
+        "name": "Remove Cleaver (Unique: Butcher's Pupil)",
+        "description": "Enable to replace cleavers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9la",
+        "type": "checkbox",
+        "name": "Remove Military Axe (Unique: Warlord's Trust)",
+        "description": "Enable to replace military axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ma",
+        "type": "checkbox",
+        "name": "Remove Flanged Mace (Unique: Sureshrill Frost)",
+        "description": "Enable to replace flanged maces with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9sb",
+        "type": "checkbox",
+        "name": "Remove Shamshir (Unique: Hexfire)",
+        "description": "Enable to replace shamshirs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9di",
+        "type": "checkbox",
+        "name": "Remove Rondel (Unique: Heart Carver)",
+        "description": "Enable to replace rondels with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ta",
+        "type": "checkbox",
+        "name": "Remove Francisca (Unique: The Scalper)",
+        "description": "Enable to replace franciscas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9tr",
+        "type": "checkbox",
+        "name": "Remove Fuscina (Unique: Kelpie Snare)",
+        "description": "Enable to replace fuscinas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9pa",
+        "type": "checkbox",
+        "name": "Remove Partizan (Unique: Pierre Tombale Couant)",
+        "description": "Enable to replace partizans with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8ls",
+        "type": "checkbox",
+        "name": "Remove Quarterstaff (Unique: Ribcracker)",
+        "description": "Enable to replace quarterstaffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8lb",
+        "type": "checkbox",
+        "name": "Remove Cedar Bow (Unique: Kuko Shakaku)",
+        "description": "Enable to replace cedar bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8lx",
+        "type": "checkbox",
+        "name": "Remove Arbalest (Unique: Langer Briser)",
+        "description": "Enable to replace arbalests with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9xf",
+        "type": "checkbox",
+        "name": "Remove Fascia",
+        "description": "Enable to replace fascias with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ama",
+        "type": "checkbox",
+        "name": "Remove Ceremonial Javelin (Unique: Titan's Revenge)",
+        "description": "Enable to replace ceremonial javelins with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC39 Armors",
+        "type": "section",
+        "name": "Treasure Class 39 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ful",
+        "type": "checkbox",
+        "name": "Remove Full Plate Mail (Unique: Goldskin) (Set: Tancred's Spine)",
+        "description": "Enable to replace full plate mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xkp",
+        "type": "checkbox",
+        "name": "Remove Sallet (Unique: Rockstopper)",
+        "description": "Enable to replace sallets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xla",
+        "type": "checkbox",
+        "name": "Remove Demonhide Armor (Unique: Skin of the Flayed One)",
+        "description": "Enable to replace demonhide armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xml",
+        "type": "checkbox",
+        "name": "Remove Round Shield (Unique: Moser's Blessed Circle) (Set: Whitstan's Guard)",
+        "description": "Enable to replace round shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xvg",
+        "type": "checkbox",
+        "name": "Remove Sharkskin Gloves (Unique: Gravepalm) (Set: Magnus' Skin)",
+        "description": "Enable to replace sharkskin glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xvb",
+        "type": "checkbox",
+        "name": "Remove Sharkskin Boots (Unique: Waterwalk)",
+        "description": "Enable to replace sharkskin bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "zvb",
+        "type": "checkbox",
+        "name": "Remove Sharkskin Belt (Unique: Razortail) (Set: M'avina's Tenet)",
+        "description": "Enable to replace sharkskin belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba7",
+        "type": "checkbox",
+        "name": "Remove Lion Helm",
+        "description": "Enable to replace lion helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne7",
+        "type": "checkbox",
+        "name": "Remove Fetish Trophy",
+        "description": "Enable to replace fetish trophys with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC39 Weapons",
+        "type": "section",
+        "name": "Treasure Class 39 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "92a",
+        "type": "checkbox",
+        "name": "Remove Twin Axe (Unique: Islestrike)",
+        "description": "Enable to replace twin axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ba",
+        "type": "checkbox",
+        "name": "Remove Bearded Axe  (Unique: Spellsteel)",
+        "description": "Enable to replace bearded axe s with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9yw",
+        "type": "checkbox",
+        "name": "Remove Petrified Wand (Unique: Carin Shard)",
+        "description": "Enable to replace petrified wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9mt",
+        "type": "checkbox",
+        "name": "Remove Jagged Star (Unique: Moonfall) (Set: Aldur's Rhythm)",
+        "description": "Enable to replace jagged stars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9fc",
+        "type": "checkbox",
+        "name": "Remove Tulwar (Unique: Blade of Ali Baba)",
+        "description": "Enable to replace tulwars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9cr",
+        "type": "checkbox",
+        "name": "Remove Dimensional Blade (Unique: Ginther's Rift)",
+        "description": "Enable to replace dimensional blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "92h",
+        "type": "checkbox",
+        "name": "Remove Espandon (Unique: Crainte Vomir)",
+        "description": "Enable to replace espandons with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9bk",
+        "type": "checkbox",
+        "name": "Remove War Dart",
+        "description": "Enable to replace war darts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9pi",
+        "type": "checkbox",
+        "name": "Remove Great Pilum",
+        "description": "Enable to replace great pilums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9vo",
+        "type": "checkbox",
+        "name": "Remove Bill (Unique: Blackleach Blade) (Set: Hwanin's Justice)",
+        "description": "Enable to replace bills with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8cs",
+        "type": "checkbox",
+        "name": "Remove Cedar Staff (Unique: Chromatic Ire)",
+        "description": "Enable to replace cedar staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8cb",
+        "type": "checkbox",
+        "name": "Remove Double Bow (Unique: Endlesshail)",
+        "description": "Enable to replace double bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob7",
+        "type": "checkbox",
+        "name": "Remove Crystalline Globe",
+        "description": "Enable to replace crystalline globes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am6",
+        "type": "checkbox",
+        "name": "Remove Ashwood Bow",
+        "description": "Enable to replace ashwood bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC42 Armors",
+        "type": "section",
+        "name": "Treasure Class 42 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "aar",
+        "type": "checkbox",
+        "name": "Remove Ancient Armor (Unique: Silks of the Victor) (Set: Milabrega's Robe)",
+        "description": "Enable to replace ancient armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xlm",
+        "type": "checkbox",
+        "name": "Remove Casque (Unique: Stealskull)",
+        "description": "Enable to replace casques with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xtu",
+        "type": "checkbox",
+        "name": "Remove Trellised Armor (Unique: Iron Pelt)",
+        "description": "Enable to replace trellised armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xng",
+        "type": "checkbox",
+        "name": "Remove Linked Mail (Unique: Spirit Forge)",
+        "description": "Enable to replace linked mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xrg",
+        "type": "checkbox",
+        "name": "Remove Scutum (Unique: Stormchaser)",
+        "description": "Enable to replace scutums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xpk",
+        "type": "checkbox",
+        "name": "Remove Barbed Shield (Unique: Lance Guard)",
+        "description": "Enable to replace barbed shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr7",
+        "type": "checkbox",
+        "name": "Remove Griffon Headress",
+        "description": "Enable to replace griffon headresss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa7",
+        "type": "checkbox",
+        "name": "Remove Akaran Rondache",
+        "description": "Enable to replace akaran rondaches with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC42 Weapons",
+        "type": "section",
+        "name": "Treasure Class 42 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9bt",
+        "type": "checkbox",
+        "name": "Remove Tabar (Unique: Stormrider)",
+        "description": "Enable to replace tabars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9qs",
+        "type": "checkbox",
+        "name": "Remove Holy Water Sprinkler (Unique: The Fetid Sprinkler)",
+        "description": "Enable to replace holy water sprinklers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9bs",
+        "type": "checkbox",
+        "name": "Remove Battle Sword (Unique: Headstriker)",
+        "description": "Enable to replace battle swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9cm",
+        "type": "checkbox",
+        "name": "Remove Dacian Falx (Unique: Bing Sz Wang)",
+        "description": "Enable to replace dacian falxs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9kr",
+        "type": "checkbox",
+        "name": "Remove Cinquedeas (Unique: Blackbog's Sharp)",
+        "description": "Enable to replace cinquedeass with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9b8",
+        "type": "checkbox",
+        "name": "Remove Hurlbat",
+        "description": "Enable to replace hurlbats with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9s9",
+        "type": "checkbox",
+        "name": "Remove Simbilan",
+        "description": "Enable to replace simbilans with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9br",
+        "type": "checkbox",
+        "name": "Remove War Fork (Unique: Soulfeast Tine)",
+        "description": "Enable to replace war forks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9s8",
+        "type": "checkbox",
+        "name": "Remove Battle Scythe (Unique: Athena's Wrath)",
+        "description": "Enable to replace battle scythes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8bs",
+        "type": "checkbox",
+        "name": "Remove Gothic Staff (Unique: Warpspear)",
+        "description": "Enable to replace gothic staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8mx",
+        "type": "checkbox",
+        "name": "Remove Siege Crossbow (Unique: Pus Spitter)",
+        "description": "Enable to replace siege crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9cs",
+        "type": "checkbox",
+        "name": "Remove Hand Scythe",
+        "description": "Enable to replace hand scythes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob8",
+        "type": "checkbox",
+        "name": "Remove Cloudy Sphere",
+        "description": "Enable to replace cloudy spheres with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC45 Armors",
+        "type": "section",
+        "name": "Treasure Class 45 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xhl",
+        "type": "checkbox",
+        "name": "Remove Basinet (Unique: Darksight Helm) (Set: Sazabi's Mental Sheath)",
+        "description": "Enable to replace basinets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xcl",
+        "type": "checkbox",
+        "name": "Remove Tigulated Mail (Unique: Crow Caw) (Set: Hwanin's Refuge)",
+        "description": "Enable to replace tigulated mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xhn",
+        "type": "checkbox",
+        "name": "Remove Mesh Armor (Unique: Shaftstop)",
+        "description": "Enable to replace mesh armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xit",
+        "type": "checkbox",
+        "name": "Remove Dragon Shield (Unique: Tiamat's Rebuke)",
+        "description": "Enable to replace dragon shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xmg",
+        "type": "checkbox",
+        "name": "Remove Heavy Bracers (Unique: Ghoulhide) (Set: Trang-Oul's Claws)",
+        "description": "Enable to replace heavy bracerss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xmb",
+        "type": "checkbox",
+        "name": "Remove Mesh Boots (Unique: Silkweave) (Set: Natalya's Soul)",
+        "description": "Enable to replace mesh bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "zmb",
+        "type": "checkbox",
+        "name": "Remove Mesh Belt (Unique: Gloom's Trap) (Set: Tal Rasha's Fine-Spun Cloth)",
+        "description": "Enable to replace mesh belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba8",
+        "type": "checkbox",
+        "name": "Remove Rage Mask",
+        "description": "Enable to replace rage masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne8",
+        "type": "checkbox",
+        "name": "Remove Sexton Trophy",
+        "description": "Enable to replace sexton trophys with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC45 Weapons",
+        "type": "section",
+        "name": "Treasure Class 45 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9mp",
+        "type": "checkbox",
+        "name": "Remove Crowbill (Unique: Pompeii's Wrath)",
+        "description": "Enable to replace crowbills with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9bw",
+        "type": "checkbox",
+        "name": "Remove Tomb Wand (Unique: Arm of King Leoric)",
+        "description": "Enable to replace tomb wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ws",
+        "type": "checkbox",
+        "name": "Remove Divine Scepter (Unique: Hand of Blessed Light)",
+        "description": "Enable to replace divine scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9fl",
+        "type": "checkbox",
+        "name": "Remove Knout (Unique: Baezil's Vortex)",
+        "description": "Enable to replace knouts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9m9",
+        "type": "checkbox",
+        "name": "Remove War Club (Unique: Bloodtree Stump)",
+        "description": "Enable to replace war clubs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9sm",
+        "type": "checkbox",
+        "name": "Remove Cutlass (Unique: Coldsteel Eye)",
+        "description": "Enable to replace cutlasss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ls",
+        "type": "checkbox",
+        "name": "Remove Rune Sword (Unique: Plague Bearer)",
+        "description": "Enable to replace rune swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9gs",
+        "type": "checkbox",
+        "name": "Remove Tusk Sword (Unique: The Vile Husk)",
+        "description": "Enable to replace tusk swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9st",
+        "type": "checkbox",
+        "name": "Remove Yari (Unique: Hone Sundan)",
+        "description": "Enable to replace yaris with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8s8",
+        "type": "checkbox",
+        "name": "Remove Short Siege Bow (Unique: Witchwild String)",
+        "description": "Enable to replace short siege bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9lw",
+        "type": "checkbox",
+        "name": "Remove Greater Claws",
+        "description": "Enable to replace greater clawss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am8",
+        "type": "checkbox",
+        "name": "Remove Ceremonial Spear",
+        "description": "Enable to replace ceremonial spears with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC48 Armors",
+        "type": "section",
+        "name": "Treasure Class 48 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xsk",
+        "type": "checkbox",
+        "name": "Remove Death Mask (Unique: Blackhorn's Face) (Set: Tal Rasha's Horadric Crest)",
+        "description": "Enable to replace death masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xrs",
+        "type": "checkbox",
+        "name": "Remove Cuirass (Unique: Duriel's Shell) (Set: Haemosu's Adamant)",
+        "description": "Enable to replace cuirasss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xsh",
+        "type": "checkbox",
+        "name": "Remove Grim Shield (Unique: Lidless Wall)",
+        "description": "Enable to replace grim shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr8",
+        "type": "checkbox",
+        "name": "Remove Hunter's Guise (Set: Aldur's Stony Gaze)",
+        "description": "Enable to replace hunter's guises with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa8",
+        "type": "checkbox",
+        "name": "Remove Protector Shield",
+        "description": "Enable to replace protector shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC48 Weapons",
+        "type": "section",
+        "name": "Treasure Class 48 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9wa",
+        "type": "checkbox",
+        "name": "Remove Naga (Unique: Guardian Naga)",
+        "description": "Enable to replace nagas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ga",
+        "type": "checkbox",
+        "name": "Remove Gothic Axe (Unique: Boneslayer Blade)",
+        "description": "Enable to replace gothic axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9wh",
+        "type": "checkbox",
+        "name": "Remove Battle Hammer (Unique: Earthshaker)",
+        "description": "Enable to replace battle hammers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9b9",
+        "type": "checkbox",
+        "name": "Remove Gothic Sword (Unique: Cloudcrack)",
+        "description": "Enable to replace gothic swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9bl",
+        "type": "checkbox",
+        "name": "Remove Stilleto (Unique: Stormspike)",
+        "description": "Enable to replace stilletos with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9gl",
+        "type": "checkbox",
+        "name": "Remove Spiculum",
+        "description": "Enable to replace spiculums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9p9",
+        "type": "checkbox",
+        "name": "Remove Lance (Unique: Spire of Honor)",
+        "description": "Enable to replace lances with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8ws",
+        "type": "checkbox",
+        "name": "Remove Rune Staff (Unique: Skull Collector)",
+        "description": "Enable to replace rune staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8l8",
+        "type": "checkbox",
+        "name": "Remove Long Siege Bow (Unique: Cliffkiller)",
+        "description": "Enable to replace long siege bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8hx",
+        "type": "checkbox",
+        "name": "Remove Ballista (Unique: Buriza-Do Kyanon)",
+        "description": "Enable to replace ballistas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ob9",
+        "type": "checkbox",
+        "name": "Remove Sparkling Ball",
+        "description": "Enable to replace sparkling balls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am7",
+        "type": "checkbox",
+        "name": "Remove Ceremonial Bow (Unique: Lycander's Aim)",
+        "description": "Enable to replace ceremonial bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC51 Armors",
+        "type": "section",
+        "name": "Treasure Class 51 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xhm",
+        "type": "checkbox",
+        "name": "Remove Winged Helm (Unique: Valkyrie Wing) (Set: Guillaume's Face)",
+        "description": "Enable to replace winged helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xpl",
+        "type": "checkbox",
+        "name": "Remove Russet Armor (Unique: Skullder's Ire)",
+        "description": "Enable to replace russet armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xow",
+        "type": "checkbox",
+        "name": "Remove Pavise (Unique: Gerke's Sanctuary)",
+        "description": "Enable to replace pavises with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xtg",
+        "type": "checkbox",
+        "name": "Remove Battle Gauntlets (Unique: Lava Gout) (Set: M'avina's Icy Clutch)",
+        "description": "Enable to replace battle gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xtb",
+        "type": "checkbox",
+        "name": "Remove Battle Boots (Unique: War Traveler) (Set: Aldur's Advance)",
+        "description": "Enable to replace battle bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ztb",
+        "type": "checkbox",
+        "name": "Remove Battle Belt (Unique: Snowclash) (Set: Wilhelm's Pride)",
+        "description": "Enable to replace battle belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xh9",
+        "type": "checkbox",
+        "name": "Remove Grim Helm (Unique: Vampire Gaze) (Set: Natalya's Totem)",
+        "description": "Enable to replace grim helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dr9",
+        "type": "checkbox",
+        "name": "Remove Sacred Feathers",
+        "description": "Enable to replace sacred featherss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ba9",
+        "type": "checkbox",
+        "name": "Remove Savage Helmet",
+        "description": "Enable to replace savage helmets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pa9",
+        "type": "checkbox",
+        "name": "Remove Gilded Shield (Unique: Herald of Zakarum)",
+        "description": "Enable to replace gilded shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ne9",
+        "type": "checkbox",
+        "name": "Remove Cantor Trophy (Set: Trang-Oul's Wing)",
+        "description": "Enable to replace cantor trophys with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC51 Weapons",
+        "type": "section",
+        "name": "Treasure Class 51 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9gi",
+        "type": "checkbox",
+        "name": "Remove Ancient Axe (Unique: The Minotaur)",
+        "description": "Enable to replace ancient axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9gw",
+        "type": "checkbox",
+        "name": "Remove Grave Wand (Unique: Blackhand Key)",
+        "description": "Enable to replace grave wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9wd",
+        "type": "checkbox",
+        "name": "Remove Ancient Sword (Unique: The Atlantean)",
+        "description": "Enable to replace ancient swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9fb",
+        "type": "checkbox",
+        "name": "Remove Zweihander (Unique: Todesfaelle Flamme)",
+        "description": "Enable to replace zweihanders with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9ts",
+        "type": "checkbox",
+        "name": "Remove Harpoon",
+        "description": "Enable to replace harpoons with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9h9",
+        "type": "checkbox",
+        "name": "Remove Bec-de-Corbin (Unique: Husoldal Evo)",
+        "description": "Enable to replace bec-de-corbins with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8sw",
+        "type": "checkbox",
+        "name": "Remove Rune Bow (Unique: Magewrath)",
+        "description": "Enable to replace rune bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9tw",
+        "type": "checkbox",
+        "name": "Remove Greater Talons (Unique: Bartuc's Cut-Throat)",
+        "description": "Enable to replace greater talonss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "oba",
+        "type": "checkbox",
+        "name": "Remove Swirling Crystal (Unique: The Oculus) (Set: Tal Rasha's Lidless Eye)",
+        "description": "Enable to replace swirling crystals with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "am9",
+        "type": "checkbox",
+        "name": "Remove Ceremonial Pike (Unique: Lycander's Flank)",
+        "description": "Enable to replace ceremonial pikes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC54 Armors",
+        "type": "section",
+        "name": "Treasure Class 54 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xlt",
+        "type": "checkbox",
+        "name": "Remove Templar Coat (Unique: Guardian Angel)",
+        "description": "Enable to replace templar coats with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xhg",
+        "type": "checkbox",
+        "name": "Remove War Gauntlets (Unique: Hellmouth) (Set: Immortal King's Forge)",
+        "description": "Enable to replace war gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xhb",
+        "type": "checkbox",
+        "name": "Remove War Boots (Unique: Gore Rider) (Set: Immortal King's Pillar)",
+        "description": "Enable to replace war bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "zhb",
+        "type": "checkbox",
+        "name": "Remove War Belt (Unique: Thundergod's Vigor) (Set: Immortal King's Detail)",
+        "description": "Enable to replace war belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ci1",
+        "type": "checkbox",
+        "name": "Remove Coronet",
+        "description": "Enable to replace coronets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uhl",
+        "type": "checkbox",
+        "name": "Remove Giant Conch",
+        "description": "Enable to replace giant conchs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "baa",
+        "type": "checkbox",
+        "name": "Remove Slayer Guard (Unique: Arreat's Face)",
+        "description": "Enable to replace slayer guards with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "nea",
+        "type": "checkbox",
+        "name": "Remove Heirophant Trophy (Unique: Homunculus)",
+        "description": "Enable to replace heirophant trophys with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC54 Weapons",
+        "type": "section",
+        "name": "Treasure Class 54 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9gm",
+        "type": "checkbox",
+        "name": "Remove Martel de Fer (Unique: The Gavel of Pain)",
+        "description": "Enable to replace martel de fers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9gd",
+        "type": "checkbox",
+        "name": "Remove Executioner Sword (Unique: Swordguard)",
+        "description": "Enable to replace executioner swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8lw",
+        "type": "checkbox",
+        "name": "Remove Gothic Bow (Unique: Goldstrike Arch)",
+        "description": "Enable to replace gothic bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "8rx",
+        "type": "checkbox",
+        "name": "Remove Chu-Ko-Nu (Unique: Demon Machine)",
+        "description": "Enable to replace chu-ko-nus with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "9qr",
+        "type": "checkbox",
+        "name": "Remove Scissors Quhab",
+        "description": "Enable to replace scissors quhabs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ha",
+        "type": "checkbox",
+        "name": "Remove Tomahawk (Unique: Razor's Edge)",
+        "description": "Enable to replace tomahawks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7cl",
+        "type": "checkbox",
+        "name": "Remove Truncheon (Unique: Nord's Tenderizer)",
+        "description": "Enable to replace truncheons with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ja",
+        "type": "checkbox",
+        "name": "Remove Hyperion Javelin",
+        "description": "Enable to replace hyperion javelins with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "amb",
+        "type": "checkbox",
+        "name": "Remove Matriarchal Bow (Unique: Blood Raven's Charge)",
+        "description": "Enable to replace matriarchal bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC57 Armors",
+        "type": "section",
+        "name": "Treasure Class 57 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xrn",
+        "type": "checkbox",
+        "name": "Remove Grand Crown (Unique: Crown of Thieves) (Set: Hwanin's Splendor)",
+        "description": "Enable to replace grand crowns with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xld",
+        "type": "checkbox",
+        "name": "Remove Sharktooth Armor (Unique: Toothrow)",
+        "description": "Enable to replace sharktooth armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xts",
+        "type": "checkbox",
+        "name": "Remove Ancient Shield (Unique: Radament's Sphere)",
+        "description": "Enable to replace ancient shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ulg",
+        "type": "checkbox",
+        "name": "Remove Bramble Mitts (Set: Laying of Hands)",
+        "description": "Enable to replace bramble mittss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dra",
+        "type": "checkbox",
+        "name": "Remove Totemic Mask (Unique: Jalal's Mane)",
+        "description": "Enable to replace totemic masks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "paa",
+        "type": "checkbox",
+        "name": "Remove Royal Shield",
+        "description": "Enable to replace royal shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC57 Weapons",
+        "type": "section",
+        "name": "Treasure Class 57 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "9wc",
+        "type": "checkbox",
+        "name": "Remove Grim Scythe (Unique: Grim's Burning Dead)",
+        "description": "Enable to replace grim scythes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7la",
+        "type": "checkbox",
+        "name": "Remove Feral Axe",
+        "description": "Enable to replace feral axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7wn",
+        "type": "checkbox",
+        "name": "Remove Polished Wand",
+        "description": "Enable to replace polished wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7sp",
+        "type": "checkbox",
+        "name": "Remove Tyrant Club (Unique: Demon Limb)",
+        "description": "Enable to replace tyrant clubs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ss",
+        "type": "checkbox",
+        "name": "Remove Falcata",
+        "description": "Enable to replace falcatas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ta",
+        "type": "checkbox",
+        "name": "Remove Flying Axe (Unique: Gimmershred)",
+        "description": "Enable to replace flying axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6sb",
+        "type": "checkbox",
+        "name": "Remove Spider Bow",
+        "description": "Enable to replace spider bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6lx",
+        "type": "checkbox",
+        "name": "Remove Pellet Bow",
+        "description": "Enable to replace pellet bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC60 Armors",
+        "type": "section",
+        "name": "Treasure Class 60 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xth",
+        "type": "checkbox",
+        "name": "Remove Embossed Plate (Unique: Atma's Wail)",
+        "description": "Enable to replace embossed plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "xtp",
+        "type": "checkbox",
+        "name": "Remove Mage Plate (Unique: Que-Hegan's Wisdom)",
+        "description": "Enable to replace mage plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uap",
+        "type": "checkbox",
+        "name": "Remove Shako (Unique: Harlequin Crest)",
+        "description": "Enable to replace shakos with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uuc",
+        "type": "checkbox",
+        "name": "Remove Heater",
+        "description": "Enable to replace heaters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ulb",
+        "type": "checkbox",
+        "name": "Remove Wyrmhide Boots",
+        "description": "Enable to replace wyrmhide bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bab",
+        "type": "checkbox",
+        "name": "Remove Carnage Helm",
+        "description": "Enable to replace carnage helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "neb",
+        "type": "checkbox",
+        "name": "Remove Minion Skull",
+        "description": "Enable to replace minion skulls with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC60 Weapons",
+        "type": "section",
+        "name": "Treasure Class 60 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7ar",
+        "type": "checkbox",
+        "name": "Remove Suwayyah",
+        "description": "Enable to replace suwayyahs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "72h",
+        "type": "checkbox",
+        "name": "Remove Legend Sword",
+        "description": "Enable to replace legend swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7dg",
+        "type": "checkbox",
+        "name": "Remove Bone Knife (Unique: Wizardspike)",
+        "description": "Enable to replace bone knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7sr",
+        "type": "checkbox",
+        "name": "Remove Hyperion Spear (Unique: Arioc's Needle)",
+        "description": "Enable to replace hyperion spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7o7",
+        "type": "checkbox",
+        "name": "Remove Ogre Axe (Unique: Bonehew)",
+        "description": "Enable to replace ogre axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6ss",
+        "type": "checkbox",
+        "name": "Remove Walking Stick",
+        "description": "Enable to replace walking sticks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6hb",
+        "type": "checkbox",
+        "name": "Remove Blade Bow",
+        "description": "Enable to replace blade bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "obb",
+        "type": "checkbox",
+        "name": "Remove Heavenly Stone",
+        "description": "Enable to replace heavenly stones with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC63 Armors",
+        "type": "section",
+        "name": "Treasure Class 63 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xul",
+        "type": "checkbox",
+        "name": "Remove Chaos Armor (Unique: Black Hades) (Set: Trang-Oul's Scales)",
+        "description": "Enable to replace chaos armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ukp",
+        "type": "checkbox",
+        "name": "Remove Hydraskull",
+        "description": "Enable to replace hydraskulls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uhn",
+        "type": "checkbox",
+        "name": "Remove Boneweave",
+        "description": "Enable to replace boneweaves with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uml",
+        "type": "checkbox",
+        "name": "Remove Luna (Unique: Blackoak Shield)",
+        "description": "Enable to replace lunas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uvg",
+        "type": "checkbox",
+        "name": "Remove Vampirebone Gloves (Unique: Dracul's Grasp)",
+        "description": "Enable to replace vampirebone glovess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ulc",
+        "type": "checkbox",
+        "name": "Remove Spiderweb Sash (Unique: Arachnid Mesh)",
+        "description": "Enable to replace spiderweb sashs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "drb",
+        "type": "checkbox",
+        "name": "Remove Blood Spirit (Unique: Cerebus' Bite)",
+        "description": "Enable to replace blood spirits with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pab",
+        "type": "checkbox",
+        "name": "Remove Sacred Targe",
+        "description": "Enable to replace sacred targes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC63 Weapons",
+        "type": "section",
+        "name": "Treasure Class 63 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7wb",
+        "type": "checkbox",
+        "name": "Remove Wrist Sword (Unique: Jade Talon)",
+        "description": "Enable to replace wrist swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ax",
+        "type": "checkbox",
+        "name": "Remove Small Crescent",
+        "description": "Enable to replace small crescents with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7sc",
+        "type": "checkbox",
+        "name": "Remove Mighty Scepter (Unique: Heaven's Light, The Redeemer)",
+        "description": "Enable to replace mighty scepters with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ma",
+        "type": "checkbox",
+        "name": "Remove Reinforced Mace (Set: Dangoon's Teaching)",
+        "description": "Enable to replace reinforced maces with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7sm",
+        "type": "checkbox",
+        "name": "Remove Ataghan (Unique: Djinn Slayer)",
+        "description": "Enable to replace ataghans with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7sb",
+        "type": "checkbox",
+        "name": "Remove Elegant Blade (Unique: Bloodmoon)",
+        "description": "Enable to replace elegant blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7pi",
+        "type": "checkbox",
+        "name": "Remove Stygian Pilum",
+        "description": "Enable to replace stygian pilums with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6lb",
+        "type": "checkbox",
+        "name": "Remove Shadow Bow",
+        "description": "Enable to replace shadow bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "amd",
+        "type": "checkbox",
+        "name": "Remove Matriarchal Spear (Unique: Stoneraven)",
+        "description": "Enable to replace matriarchal spears with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC66 Armors",
+        "type": "section",
+        "name": "Treasure Class 66 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "xar",
+        "type": "checkbox",
+        "name": "Remove Ornate Armor (Unique: Corpsemourn) (Set: Griswold's Heart)",
+        "description": "Enable to replace ornate armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uui",
+        "type": "checkbox",
+        "name": "Remove Dusk Shroud (Unique: Ormus' Robes) (Set: Dark Adherent)",
+        "description": "Enable to replace dusk shrouds with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "urg",
+        "type": "checkbox",
+        "name": "Remove Hyperion",
+        "description": "Enable to replace hyperions with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uvb",
+        "type": "checkbox",
+        "name": "Remove Scarabshell Boots (Unique: Sandstorm Trek)",
+        "description": "Enable to replace scarabshell bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bac",
+        "type": "checkbox",
+        "name": "Remove Fury Visor (Unique: Wolfhowl)",
+        "description": "Enable to replace fury visors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ned",
+        "type": "checkbox",
+        "name": "Remove Overseer Skull",
+        "description": "Enable to replace overseer skulls with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC66 Weapons",
+        "type": "section",
+        "name": "Treasure Class 66 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7ba",
+        "type": "checkbox",
+        "name": "Remove Silver-edged Axe (Unique: Ethereal Edge)",
+        "description": "Enable to replace silver-edged axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7yw",
+        "type": "checkbox",
+        "name": "Remove Ghost Wand",
+        "description": "Enable to replace ghost wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7cm",
+        "type": "checkbox",
+        "name": "Remove Highland Blade",
+        "description": "Enable to replace highland blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7tk",
+        "type": "checkbox",
+        "name": "Remove Flying Knife",
+        "description": "Enable to replace flying knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7tr",
+        "type": "checkbox",
+        "name": "Remove Stygian Pike",
+        "description": "Enable to replace stygian pikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7vo",
+        "type": "checkbox",
+        "name": "Remove Colossus Voulge",
+        "description": "Enable to replace colossus voulges with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6ls",
+        "type": "checkbox",
+        "name": "Remove Stalagmite",
+        "description": "Enable to replace stalagmites with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "amf",
+        "type": "checkbox",
+        "name": "Remove Matriarchal Javelin (Unique: Thunderstroke)",
+        "description": "Enable to replace matriarchal javelins with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC69 Armors",
+        "type": "section",
+        "name": "Treasure Class 69 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ulm",
+        "type": "checkbox",
+        "name": "Remove Armet (Unique: Steel Shade, Darkfear)",
+        "description": "Enable to replace armets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uea",
+        "type": "checkbox",
+        "name": "Remove Wyrmhide",
+        "description": "Enable to replace wyrmhides with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ula",
+        "type": "checkbox",
+        "name": "Remove Scarab Husk",
+        "description": "Enable to replace scarab husks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "umg",
+        "type": "checkbox",
+        "name": "Remove Vambraces (Unique: Soul Drainer)",
+        "description": "Enable to replace vambracess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uvc",
+        "type": "checkbox",
+        "name": "Remove Vampirefang Belt (Unique: Nosferatu's Coil)",
+        "description": "Enable to replace vampirefang belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "upk",
+        "type": "checkbox",
+        "name": "Remove Blade Barrier (Unique: Spike Thorn)",
+        "description": "Enable to replace blade barriers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "drc",
+        "type": "checkbox",
+        "name": "Remove Sun Spirit",
+        "description": "Enable to replace sun spirits with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "neg",
+        "type": "checkbox",
+        "name": "Remove Hellspawn Skull",
+        "description": "Enable to replace hellspawn skulls with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC69 Weapons",
+        "type": "section",
+        "name": "Treasure Class 69 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7xf",
+        "type": "checkbox",
+        "name": "Remove War Fist",
+        "description": "Enable to replace war fists with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7m7",
+        "type": "checkbox",
+        "name": "Remove Ogre Maul (Unique: Windhammer) (Set: Immortal King's Stone Crusher)",
+        "description": "Enable to replace ogre mauls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7fc",
+        "type": "checkbox",
+        "name": "Remove Hydra Edge",
+        "description": "Enable to replace hydra edges with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6cb",
+        "type": "checkbox",
+        "name": "Remove Great Bow",
+        "description": "Enable to replace great bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6mx",
+        "type": "checkbox",
+        "name": "Remove Gorgon Crossbow",
+        "description": "Enable to replace gorgon crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "obc",
+        "type": "checkbox",
+        "name": "Remove Eldritch Orb (Unique: Eschuta's Temper)",
+        "description": "Enable to replace eldritch orbs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC72 Armors",
+        "type": "section",
+        "name": "Treasure Class 72 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ci2",
+        "type": "checkbox",
+        "name": "Remove Tiara (Unique: Kira's Guardian)",
+        "description": "Enable to replace tiaras with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "utu",
+        "type": "checkbox",
+        "name": "Remove Wire Fleece (Unique: The Gladiator's Bane)",
+        "description": "Enable to replace wire fleeces with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ung",
+        "type": "checkbox",
+        "name": "Remove Diamond Mail",
+        "description": "Enable to replace diamond mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uit",
+        "type": "checkbox",
+        "name": "Remove Monarch (Unique: Stormshield)",
+        "description": "Enable to replace monarchs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "umb",
+        "type": "checkbox",
+        "name": "Remove Boneweave Boots (Unique: Marrowwalk)",
+        "description": "Enable to replace boneweave bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pac",
+        "type": "checkbox",
+        "name": "Remove Sacred Rondache (Unique: Alma Negra)",
+        "description": "Enable to replace sacred rondaches with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC72 Weapons",
+        "type": "section",
+        "name": "Treasure Class 72 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "72a",
+        "type": "checkbox",
+        "name": "Remove Ettin Axe (Unique: Rune Master)",
+        "description": "Enable to replace ettin axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7mt",
+        "type": "checkbox",
+        "name": "Remove Devil Star (Unique: Baranar's Star)",
+        "description": "Enable to replace devil stars with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gs",
+        "type": "checkbox",
+        "name": "Remove Balrog Blade (Unique: Flamebellow)",
+        "description": "Enable to replace balrog blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7di",
+        "type": "checkbox",
+        "name": "Remove Mithral Point",
+        "description": "Enable to replace mithral points with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7s7",
+        "type": "checkbox",
+        "name": "Remove Balrog Spear (Unique: Demon's Arch)",
+        "description": "Enable to replace balrog spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7s8",
+        "type": "checkbox",
+        "name": "Remove Thresher (Unique: The Reaper's Toll)",
+        "description": "Enable to replace threshers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6s7",
+        "type": "checkbox",
+        "name": "Remove Diamond Bow",
+        "description": "Enable to replace diamond bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC75 Armors",
+        "type": "section",
+        "name": "Treasure Class 75 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "usk",
+        "type": "checkbox",
+        "name": "Remove Demonhead (Unique: Andariel's Visage)",
+        "description": "Enable to replace demonheads with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ucl",
+        "type": "checkbox",
+        "name": "Remove Loricated Mail (Set: Natalya's Shadow)",
+        "description": "Enable to replace loricated mails with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "urs",
+        "type": "checkbox",
+        "name": "Remove Great Hauberk",
+        "description": "Enable to replace great hauberks with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "umc",
+        "type": "checkbox",
+        "name": "Remove Mithril Coil (Unique: Verdungo's Hearty Cord) (Set: Credendum)",
+        "description": "Enable to replace mithril coils with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bad",
+        "type": "checkbox",
+        "name": "Remove Destroyer Helm (Unique: Demonhorn's Edge)",
+        "description": "Enable to replace destroyer helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pad",
+        "type": "checkbox",
+        "name": "Remove Ancient Shield",
+        "description": "Enable to replace ancient shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC75 Weapons",
+        "type": "section",
+        "name": "Treasure Class 75 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7cs",
+        "type": "checkbox",
+        "name": "Remove Battle Cestus (Unique: Shadow Killer)",
+        "description": "Enable to replace battle cestuss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7bt",
+        "type": "checkbox",
+        "name": "Remove Decapitator (Unique: Hellslayer)",
+        "description": "Enable to replace decapitators with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7bw",
+        "type": "checkbox",
+        "name": "Remove Lich Wand (Unique: Boneshade)",
+        "description": "Enable to replace lich wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7cr",
+        "type": "checkbox",
+        "name": "Remove Phase Blade (Unique: Lightsabre, Azurewrath)",
+        "description": "Enable to replace phase blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7br",
+        "type": "checkbox",
+        "name": "Remove Mancatcher (Unique: Viperfork)",
+        "description": "Enable to replace mancatchers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6cs",
+        "type": "checkbox",
+        "name": "Remove Elder Staff (Unique: Ondal's Wisdom) (Set: Naj's Puzzler)",
+        "description": "Enable to replace elder staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6hx",
+        "type": "checkbox",
+        "name": "Remove Colossus Crossbow (Unique: Hellrack)",
+        "description": "Enable to replace colossus crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "obd",
+        "type": "checkbox",
+        "name": "Remove Demon Heart",
+        "description": "Enable to replace demon hearts with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC78 Armors",
+        "type": "section",
+        "name": "Treasure Class 78 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "upl",
+        "type": "checkbox",
+        "name": "Remove Balrog Skin (Unique: Arkaine's Valor) (Set: Sazabi's Ghost Liberator)",
+        "description": "Enable to replace balrog skins with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ult",
+        "type": "checkbox",
+        "name": "Remove Hellforge Plate (Set: Naj's Light Plate)",
+        "description": "Enable to replace hellforge plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "utg",
+        "type": "checkbox",
+        "name": "Remove Crusader Gauntlets",
+        "description": "Enable to replace crusader gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ush",
+        "type": "checkbox",
+        "name": "Remove Troll Nest (Unique: Head Hunter's Glory)",
+        "description": "Enable to replace troll nests with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "drd",
+        "type": "checkbox",
+        "name": "Remove Earth Spirit (Unique: Spirit Keeper)",
+        "description": "Enable to replace earth spirits with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC78 Weapons",
+        "type": "section",
+        "name": "Treasure Class 78 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7lw",
+        "type": "checkbox",
+        "name": "Remove Feral Claws (Unique: Firelizard's Talons)",
+        "description": "Enable to replace feral clawss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7qs",
+        "type": "checkbox",
+        "name": "Remove Seraph Rod",
+        "description": "Enable to replace seraph rods with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7fl",
+        "type": "checkbox",
+        "name": "Remove Scourge (Unique: Horizon's Tornado, Stormlash)",
+        "description": "Enable to replace scourges with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7bs",
+        "type": "checkbox",
+        "name": "Remove Conquest Sword",
+        "description": "Enable to replace conquest swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7b7",
+        "type": "checkbox",
+        "name": "Remove Champion Sword (Unique: Doombringer)",
+        "description": "Enable to replace champion swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7bk",
+        "type": "checkbox",
+        "name": "Remove Winged Knife (Unique: Warshrike)",
+        "description": "Enable to replace winged knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6l7",
+        "type": "checkbox",
+        "name": "Remove Crusader Bow (Unique: Eaglehorn)",
+        "description": "Enable to replace crusader bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "amc",
+        "type": "checkbox",
+        "name": "Remove Grand Matron Bow (Set: M'avina's Caster)",
+        "description": "Enable to replace grand matron bows with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC81 Armors",
+        "type": "section",
+        "name": "Treasure Class 81 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "uhm",
+        "type": "checkbox",
+        "name": "Remove Spired Helm (Unique: Veil of Steel, Nightwing's Veil) (Set: Ondal's Almighty)",
+        "description": "Enable to replace spired helms with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uld",
+        "type": "checkbox",
+        "name": "Remove Kraken Shell (Unique: Leviathan) (Set: M'avina's Embrace)",
+        "description": "Enable to replace kraken shells with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uow",
+        "type": "checkbox",
+        "name": "Remove Aegis (Unique: Medusa's Gaze)",
+        "description": "Enable to replace aegiss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "utb",
+        "type": "checkbox",
+        "name": "Remove Mirrored Boots",
+        "description": "Enable to replace mirrored bootss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "bae",
+        "type": "checkbox",
+        "name": "Remove Conqueror Crown (Unique: Halaberd's Reign)",
+        "description": "Enable to replace conqueror crowns with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "nee",
+        "type": "checkbox",
+        "name": "Remove Succubus Skull (Unique: Boneflame)",
+        "description": "Enable to replace succubus skulls with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC81 Weapons",
+        "type": "section",
+        "name": "Treasure Class 81 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7tw",
+        "type": "checkbox",
+        "name": "Remove Runic Talons",
+        "description": "Enable to replace runic talonss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7mp",
+        "type": "checkbox",
+        "name": "Remove War Spike (Unique: Cranebeak)",
+        "description": "Enable to replace war spikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7fb",
+        "type": "checkbox",
+        "name": "Remove Colossal Sword",
+        "description": "Enable to replace colossal swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7b8",
+        "type": "checkbox",
+        "name": "Remove Winged Axe (Unique: Lacerator)",
+        "description": "Enable to replace winged axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gl",
+        "type": "checkbox",
+        "name": "Remove Ghost Glaive (Unique: Wraith Flight)",
+        "description": "Enable to replace ghost glaives with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7pa",
+        "type": "checkbox",
+        "name": "Remove Cryptic Axe (Unique: Tomb Reaver)",
+        "description": "Enable to replace cryptic axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6sw",
+        "type": "checkbox",
+        "name": "Remove Ward Bow (Unique: Widowmaker)",
+        "description": "Enable to replace ward bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "ame",
+        "type": "checkbox",
+        "name": "Remove Matriarchal Pike",
+        "description": "Enable to replace matriarchal pikes with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC84 Armors",
+        "type": "section",
+        "name": "Treasure Class 84 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "uth",
+        "type": "checkbox",
+        "name": "Remove Lacquered Plate (Set: Tal Rasha's Guardianship)",
+        "description": "Enable to replace lacquered plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uul",
+        "type": "checkbox",
+        "name": "Remove Shadow Plate (Unique: Steel Carapace) (Set: Aldur's Deception)",
+        "description": "Enable to replace shadow plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "utp",
+        "type": "checkbox",
+        "name": "Remove Archon Plate",
+        "description": "Enable to replace archon plates with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uts",
+        "type": "checkbox",
+        "name": "Remove Ward (Unique: Spirit Ward) (Set: Taebaek's Glory)",
+        "description": "Enable to replace wards with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "utc",
+        "type": "checkbox",
+        "name": "Remove Troll Belt (Set: Trang-Oul's Girth)",
+        "description": "Enable to replace troll belts with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uh9",
+        "type": "checkbox",
+        "name": "Remove Bone Visage (Unique: Giant Skull) (Set: Trang-Oul's Guise)",
+        "description": "Enable to replace bone visages with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "dre",
+        "type": "checkbox",
+        "name": "Remove Sky Spirit (Unique: Ravenlore)",
+        "description": "Enable to replace sky spirits with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "pae",
+        "type": "checkbox",
+        "name": "Remove Zakarum Shield (Unique: Dragonscale)",
+        "description": "Enable to replace zakarum shields with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC84 Weapons",
+        "type": "section",
+        "name": "Treasure Class 84 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7ga",
+        "type": "checkbox",
+        "name": "Remove Champion Axe (Unique: Messerschmidt's Reaver)",
+        "description": "Enable to replace champion axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7wh",
+        "type": "checkbox",
+        "name": "Remove Legendary Mallet (Unique: Schaefer's Hammer, Stone Crusher)",
+        "description": "Enable to replace legendary mallets with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ls",
+        "type": "checkbox",
+        "name": "Remove Cryptic Sword (Unique: Frostwind) (Set: Sazabi's Cobalt Redeemer)",
+        "description": "Enable to replace cryptic swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7kr",
+        "type": "checkbox",
+        "name": "Remove Fanged Knife (Unique: Fleshripper)",
+        "description": "Enable to replace fanged knifes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7st",
+        "type": "checkbox",
+        "name": "Remove Ghost Spear",
+        "description": "Enable to replace ghost spears with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7h7",
+        "type": "checkbox",
+        "name": "Remove Great Poleaxe",
+        "description": "Enable to replace great poleaxes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6bs",
+        "type": "checkbox",
+        "name": "Remove Shillelagh",
+        "description": "Enable to replace shillelaghs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6rx",
+        "type": "checkbox",
+        "name": "Remove Demon Crossbow (Unique: Gut Siphon)",
+        "description": "Enable to replace demon crossbows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "obe",
+        "type": "checkbox",
+        "name": "Remove Vortex Orb",
+        "description": "Enable to replace vortex orbs with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC87 Armors",
+        "type": "section",
+        "name": "Treasure Class 87 Armors",
+        "defaultExpanded": false
+    },
+    {
+        "id": "ci3",
+        "type": "checkbox",
+        "name": "Remove Diadem (Unique: Griffon's Eye) (Set: M'avina's True Sight)",
+        "description": "Enable to replace diadems with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "urn",
+        "type": "checkbox",
+        "name": "Remove Corona (Unique: Crown of Ages) (Set: Griswold's Valor)",
+        "description": "Enable to replace coronas with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uar",
+        "type": "checkbox",
+        "name": "Remove Sacred Armor (Unique: Tyrael's Might, Templar's Might) (Set: Immortal King's Soul Cage)",
+        "description": "Enable to replace sacred armors with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uhg",
+        "type": "checkbox",
+        "name": "Remove Ogre Gauntlets (Unique: Steelrend)",
+        "description": "Enable to replace ogre gauntletss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uhb",
+        "type": "checkbox",
+        "name": "Remove Myrmidon Greaves (Unique: Shadow Dancer)",
+        "description": "Enable to replace myrmidon greavess with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "uhc",
+        "type": "checkbox",
+        "name": "Remove Colossus Girdle",
+        "description": "Enable to replace colossus girdles with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "drf",
+        "type": "checkbox",
+        "name": "Remove Dream Spirit",
+        "description": "Enable to replace dream spirits with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "baf",
+        "type": "checkbox",
+        "name": "Remove Guardian Crown",
+        "description": "Enable to replace guardian crowns with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "paf",
+        "type": "checkbox",
+        "name": "Remove Vortex Shield (Set: Griswold's Honor)",
+        "description": "Enable to replace vortex shields with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "nef",
+        "type": "checkbox",
+        "name": "Remove Bloodlord Skull (Unique: Darkforce Spawn)",
+        "description": "Enable to replace bloodlord skulls with NoDrop",
+        "defaultValue": false
+    },
+	
+    {
+        "id": "TC87 Weapons",
+        "type": "section",
+        "name": "Treasure Class 87 Weapons",
+        "defaultExpanded": false
+    },
+    {
+        "id": "7qr",
+        "type": "checkbox",
+        "name": "Remove Scissors Suwayyah (Set: Natalya's Mark)",
+        "description": "Enable to replace scissors suwayyahs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7wa",
+        "type": "checkbox",
+        "name": "Remove Berserker Axe (Unique: Death Cleaver)",
+        "description": "Enable to replace berserker axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gi",
+        "type": "checkbox",
+        "name": "Remove Glorious Axe (Unique: Executioner's Justice)",
+        "description": "Enable to replace glorious axes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gw",
+        "type": "checkbox",
+        "name": "Remove Unearthed Wand (Unique: Death's Web)",
+        "description": "Enable to replace unearthed wands with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ws",
+        "type": "checkbox",
+        "name": "Remove Caduceus (Unique: Astreon's Iron Ward) (Set: Griswold's Redemption)",
+        "description": "Enable to replace caduceuss with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gm",
+        "type": "checkbox",
+        "name": "Remove Thunder Maul (Unique: The Cranium Basher, Earth Shifter)",
+        "description": "Enable to replace thunder mauls with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7wd",
+        "type": "checkbox",
+        "name": "Remove Mythical Sword (Set: Bul-Kathos' Tribal Guardian)",
+        "description": "Enable to replace mythical swords with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7gd",
+        "type": "checkbox",
+        "name": "Remove Colossus Blade (Unique: The Grandfather) (Set: Bul-Kathos' Sacred Charge)",
+        "description": "Enable to replace colossus blades with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7bl",
+        "type": "checkbox",
+        "name": "Remove Legend Spike (Unique: Ghostflame)",
+        "description": "Enable to replace legend spikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7ts",
+        "type": "checkbox",
+        "name": "Remove Winged Harpoon (Unique: Gargoyle's Bite)",
+        "description": "Enable to replace winged harpoons with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7p7",
+        "type": "checkbox",
+        "name": "Remove War Pike (Unique: Steel Pillar)",
+        "description": "Enable to replace war pikes with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "7wc",
+        "type": "checkbox",
+        "name": "Remove Giant Thresher (Unique: Stormspire)",
+        "description": "Enable to replace giant threshers with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6ws",
+        "type": "checkbox",
+        "name": "Remove Archon Staff (Unique: Mang Song's Lesson)",
+        "description": "Enable to replace archon staffs with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "6lw",
+        "type": "checkbox",
+        "name": "Remove Hydra Bow (Unique: Windforce)",
+        "description": "Enable to replace hydra bows with NoDrop",
+        "defaultValue": false
+    },
+    {
+        "id": "obf",
+        "type": "checkbox",
+        "name": "Remove Dimensional Shard (Unique: Death's Fathom)",
+        "description": "Enable to replace dimensional shards with NoDrop",
+        "defaultValue": false
+    }
+	
+  ]
+  
+}
