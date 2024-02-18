@@ -10,7 +10,7 @@ The mod allows the selection of no drop chance for the follwing:
 - misc items
 - gem qualities
 - runes (up to Fal Rune)
-- all armors and weapons in the game: starting from treasure class 3 and up to treasure class 87 (the highest in the game)
+- all individual armors and weapons in the game: starting from treasure class 3 and up to treasure class 87 (the highest in the game)
 
 By replacing the original base item's drop chance with no drop there is no intended change in any item drop probability. 
 If you suspect the original drop chances are affected by this mod do not hesitate to contact me.
