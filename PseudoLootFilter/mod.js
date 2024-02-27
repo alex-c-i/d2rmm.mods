@@ -381,12 +381,22 @@ function handleGems() {
 				log("handleGems config[" + currItemTypeRow.Code + "] = " + config[currItemTypeRow.Code]);
 
 				if(config[currItemTypeRow.Code] === true) {
+					
+					MISC_FILE.rows
+						.filter((currMiscItemRow) => currMiscItemRow.type2 === currItemTypeRow.Code)
+						.forEach(
 
-					gemTreasureClasses.forEach(
-						(currTcRow) => {
-							updateTreasureClassRowToFullNoDrop(currTcRow);
-						}
-					);
+							(currMiscItemRow) => {
+
+								gemTreasureClasses.forEach(
+									(currTcRow) => {
+										updateTreasureClassRowItemToNoDrop(currTcRow, currMiscItemRow.code);
+									}
+								);
+
+							}
+					
+						);
 
 				}
 				
@@ -587,6 +597,20 @@ function updateTreasureClassRowToFullNoDrop(treasureClassRow) {
 	
 }
 
+/**
+* Formats the input item name referenced in a TC Item1, ..., Item 10 column. 
+* Needed for TCs referencing an item with parameters such as gold with a multiplier, for example '"gld,mul=1280"' is formatted to 'gld'.
+* @param {*} itemName The item name to be formatted. Can also be another TC referenced in Item1, ..., Item10, for a given TC.
+* @returns The item name with quotes stripped and optional params mentioned after a comma (',') removed. 
+*/
+function formattedTcItemName(itemName) {
+	
+	return itemName
+			.replace(/["]+/g, '')
+			.split(',')[0];
+
+}
+
 function updateTreasureClassRowItemToNoDrop(treasureClassRow, itemCode) {
     
 	log("updateTreasureClassRowItemToNoDrop treasureClassRow = " + treasureClassRow + "; itemCode = " + itemCode);
@@ -595,14 +619,14 @@ function updateTreasureClassRowItemToNoDrop(treasureClassRow, itemCode) {
 		
         const currItemIndex = 'Item' + i;
         const currItemProbabilityIndex = 'Prob' + i;
-    
-		if(treasureClassRow[currItemIndex] === itemCode) {
+
+		if(formattedTcItemName(treasureClassRow[currItemIndex]) === itemCode) {
 			treasureClassRow[TC_NO_DROP_COLUMN] = intNvl(treasureClassRow[TC_NO_DROP_COLUMN]) + intNvl(treasureClassRow[currItemProbabilityIndex]);
 			treasureClassRow[currItemProbabilityIndex] = 0;
 		}
 
     }
-    	
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////
