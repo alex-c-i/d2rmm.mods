@@ -1,0 +1,7 @@
+{
+  "name": "Cow King Drop Fix",
+  "description": "When Blizzard allowed us to reopen the Secret Cow Level portal in D2R, even after killing the Cow King, they introduced a bug that made the Cow King unable to drop items from the Cow King Set. This mod changes the superunique class of the Cow King from 'cowking' back to 'hellbovine', this allows him to drop items from the set again. The Cow King can still be killed safely and you can still reopen the Secret Cow Level portal because this is probably hardcoded. No other unexpected side effects were noticed.",
+  "author": "alexci",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/472",
+  "version": "1.0.0"
+}
